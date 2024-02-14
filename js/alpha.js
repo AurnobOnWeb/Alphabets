@@ -1,3 +1,4 @@
 function playNow() {
-  console.log("Play");
+  hideElement("home");
+  showElement("gameArea");
 }
