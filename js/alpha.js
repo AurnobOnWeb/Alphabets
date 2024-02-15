@@ -1,3 +1,10 @@
+document.addEventListener("keyup", handleKeyboard);
+function continueGame() {
+  const randomCharacter = getRandomAlphabet();
+  const alphabet = (document.getElementById("Alphabet").innerHTML =
+    randomCharacter);
+  addBgClass(randomCharacter);
+}
 function handleKeyboard(event) {
   const playerPressed = event.key;
   const randomCharacter = document.getElementById("Alphabet").innerText;
@@ -6,13 +13,6 @@ function handleKeyboard(event) {
   } else {
     console.log("You have Lost A Life");
   }
-}
-document.addEventListener("keyup", handleKeyboard);
-function continueGame() {
-  const randomCharacter = getRandomAlphabet();
-  const alphabet = (document.getElementById("Alphabet").innerHTML =
-    randomCharacter);
-  addBgClass(randomCharacter);
 }
 
 function playNow() {
